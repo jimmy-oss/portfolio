@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Common styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: "Jura",sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end of Common styles*/
+
+/*mouse circle */
+.mouse-circle,
+.mouse-dot{
+    border-radius: 50%;
+    position: fixed;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.mouse-circle{
+      width: 6rem;
+      height: 6rem;
+      border: .1rem solid #c7a622;
+      animation: mousecircleAnime 10s infinite linear;
+}
+@keyframes mousecircleAnime{
+     0%{
+         width: 6rem;
+         height: 6rem;
+     }
+     25%{
+        width: 8rem;
+        height: 8rem;
+    }
+    35%{
+        width: 4rem;
+        height: 4rem;
+    }
+    70%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        width: 6rem;
+        height: 6rem;
+    }
+}
+.mouse-dot{
+      width: .5rem;
+      height: .5rem;
+      background-color: #9b0e0e;
+      animation: mouseDotAnime 10s infinite linear;
+}
+@keyframes mouseDotAnime{
+     0%{
+         width: 0.5rem;
+         height: 0.5rem;
+     }
+     55%{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    100%{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+/*end of mouse circle */
+/*end of Common styles*/
+/*page BG*/
+.page-bg{
+     position: fixed;
+     width: 100%;
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+     url("./images/bg.jpg") center no-repeat;
+     background-size: cover;
+     background-position: center;
+    background-repeat: no-repeat;
+}
+/*end of page BG*/
+/*section 1*/
+.section-1{
+     position: relative;
+     width: 100%;
+     height: 100vh;  
+}
+/*logo*/
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* end of logo*/
+/*end of section 1*/
+/*Animated circles*/
+.circles{
+    position: absolute;
+    top: -10em;
+    left: -18em;
+    right: -16em;
+    width: 125%;
+    height: 155%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+     
+}
+.circle{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.7;
+    
+}
+.circle-1{
+     background: url("./images/landing/circle-1-img.jpg") center no-repeat;
+     background-size: cover;
+     background-clip: content-box;
+     border: 0.5rem dotted #a14b1a;
+}
+.circle-2{
+    background: url("./images/landing/circle-2-img.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem dashed #ffbd07;
+}
+.circle-3{
+    background: url("./images/landing/circle-3-img.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 1rem double #9b0e0e;
+}
+.circle-4{
+    background: url("./images/landing/circle-4-img.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.7rem double #fff;
+}
+.main-circle{
+      width: 45rem;
+      height: 45rem;
+      position: absolute;
+      overflow: hidden;
+      border-radius: 50%;
+}
+.main-circle img{
+    mix-blend-mode:normal;
+}
+/* end of animated circles*/
+/* featured texts*/
+.featured-text{
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 3.5;
+    position: sticky;
+    top: 0;
+}
+.featured-text-1{
+    margin: 0 auto 0 10rem;
+    margin-left:1em ;
+    margin-top: 4em;
+    
+}
+.featured-text-2{
+    margin: 0 10rem 0 auto;
+    margin-right: 2em;
+
+}
+/*end of featured texts*/
+
+
+ 
