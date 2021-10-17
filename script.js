@@ -79,4 +79,17 @@ mainBtns.forEach((btn) => {
   });
 });
 //end of main button
+//About me texts
+const aboutMeText = document.querySelector(".about-me-text")
+const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience & I don't talk much, just contact me. :)";
+Array.from(aboutMeTextContent).forEach(Char =>{
+   const span = document.createElement("span")
+   span.textContent = Char;
+   aboutMeText.appendChild(span);
+   span.addEventListener("mouseenter",(e)=>{
+      e.target.style.animation = "aboutMeTextAnime 10s infinite";
+
+   })
+});
+//End of About me texts
  
