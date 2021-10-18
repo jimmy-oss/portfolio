@@ -96,9 +96,10 @@ Array.from(aboutMeTextContent).forEach(Char =>{
 //Projects
 const container = document.querySelector(".container")
 const projects = document.querySelectorAll(".project")
+const projectHideBtn = document.querySelector(".project-hide-btn")
 
-projects.forEach(project=>{
-  project.addEventListener("mouseenter",() =>{
+    projects.forEach(project=>{
+    project.addEventListener("mouseenter",() =>{
     project.firstElementChild.style.top = `-${project.firstElementChild.offsetHeight - project.offsetHeight + 20}px`;
   });
 project.addEventListener("mouseleave",()=>{
@@ -112,8 +113,18 @@ project.addEventListener('click',() =>{
 
  const bigImg = document.createElement("img")
  bigImg.className = "project-img"
- bigImg.setAttribute('src' , 'images/projects/project-1-big.jpg')
+ const imgPath = project.firstElementChild.getAttribute('src').split(".")[1];
+ console.log(imgPath);
+ bigImg.setAttribute('src' , `${imgPath}-big.jpg`)
  bigImgWrapper.appendChild(bigImg);
+  document.body.style.overflowY = "hidden";
+
+  projectHideBtn.classList.add("change");
+  projectHideBtn.onclick = () =>{
+  projectHideBtn.classList.remove("change");
+  bigImgWrapper.remove()
+  document.body.style.overflowY = "scroll";
+  }
 });
 // End of big projects image
 });
