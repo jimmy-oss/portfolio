@@ -1,4 +1,4 @@
- //Mouse circle
+  //Mouse circle
 const mouseCircle = document.querySelector(".mouse-circle");
 const mouseDot = document.querySelector(".mouse-dot");
 const mouseCircleFn = (x,y) =>{
@@ -81,7 +81,7 @@ mainBtns.forEach((btn) => {
 //end of main button
 //About me texts
 const aboutMeText = document.querySelector(".about-me-text")
-const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience & I don't talk much, just contact me. :)";
+const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience remember mindfulness in the workplace is key to success just contact me. :)";
 Array.from(aboutMeTextContent).forEach(Char =>{
    const span = document.createElement("span")
    span.textContent = Char;
@@ -94,15 +94,22 @@ Array.from(aboutMeTextContent).forEach(Char =>{
 //End of About me texts
 
 //Projects
+const container = document.querySelector(".container")
 const projects = document.querySelectorAll(".project")
 
 projects.forEach(project=>{
   project.addEventListener("mouseenter",() =>{
     project.firstElementChild.style.top = `-${project.firstElementChild.offsetHeight - project.offsetHeight + 20}px`;
-  })
+  });
 project.addEventListener("mouseleave",()=>{
-  project.firstElementChild.style.top = "2rem";
-})
+  project.firstElementChild.style.top = "2rem"
 });
-//End of Projects
- 
+// Big projects image
+project.addEventListener('click',() =>{
+ const bigImgWrapper = document.createElement('div')
+ bigImgWrapper.className = "project-img-wrapper";
+ container.appendChild(bigImgWrapper);
+});
+// End of big projects image
+});
+// End of projects

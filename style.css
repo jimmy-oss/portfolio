@@ -395,7 +395,7 @@ html{
      0%{
          transform: rotateY(0);
      }
-     20%{
+     25%{
          transform: rotateY(-2deg) rotateX(2deg);
      }
      50%{
@@ -423,6 +423,24 @@ html{
        transform: rotateY(0);
     }
 }
+/*big project image*/
+.project-img-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color:rgba(0, 0, 0, 0.9);
+    animation: imgWrapperAnime 1s forwards;
+}
+@keyframes imgWrapperAnime{
+    0%{
+        height: 0;
+    }
+    100%{
+    height: 100%;
+    }
+}
+/* end of big project image*/
 /*end of projects*/
 /*end of section 3*/
- 
