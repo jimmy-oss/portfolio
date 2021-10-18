@@ -109,6 +109,11 @@ project.addEventListener('click',() =>{
  const bigImgWrapper = document.createElement('div')
  bigImgWrapper.className = "project-img-wrapper";
  container.appendChild(bigImgWrapper);
+
+ const bigImg = document.createElement("img")
+ bigImg.className = "project-img"
+ bigImg.setAttribute('src' , 'images/projects/project-1-big.jpg')
+ bigImgWrapper.appendChild(bigImg);
 });
 // End of big projects image
 });
