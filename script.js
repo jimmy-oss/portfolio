@@ -81,7 +81,7 @@ mainBtns.forEach((btn) => {
 //end of main button
 //About me texts
 const aboutMeText = document.querySelector(".about-me-text")
-const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience remember mindfulness in the workplace is key to success just contact me. :)";
+const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience remember mindfulness in the workplace is the key to success just contact me. :)";
 Array.from(aboutMeTextContent).forEach(Char =>{
    const span = document.createElement("span")
    span.textContent = Char;
@@ -98,11 +98,11 @@ const container = document.querySelector(".container")
 const projects = document.querySelectorAll(".project")
 const projectHideBtn = document.querySelector(".project-hide-btn")
 
-    projects.forEach(project=>{
+    projects.forEach((project,i) =>{
     project.addEventListener("mouseenter",() =>{
     project.firstElementChild.style.top = `-${project.firstElementChild.offsetHeight - project.offsetHeight + 20}px`;
   });
-project.addEventListener("mouseleave",()=>{
+   project.addEventListener("mouseleave",()=>{
   project.firstElementChild.style.top = "2rem"
 });
 // Big projects image
@@ -127,5 +127,44 @@ project.addEventListener('click',() =>{
   }
 });
 // End of big projects image
+ i >=6 &&(project.style.cssText = "display:none;opacity:0");
 });
+//Projects button
+const section3 = document.querySelector(".section-3")
+const projectsBtn = document.querySelector(".projects-btn")
+const projectsBtnText = document.querySelector(".projects-btn span")
+let showHideBool = true;
+
+const showProjects = (project,i) =>{
+  setTimeout(() =>{
+    project.style.display = "flex";
+    section3.scrollIntoView({block:"end"});
+  },600)
+ setTimeout(() =>{
+  project.style.opacity = "1";
+ }, i * 200);
+};
+
+const hideProjects = (project,i) => {
+  setTimeout(() =>{
+    project.style.display = "none";
+    section3.scrollIntoView({block:"end"});
+  },1200);
+  setTimeout(() =>{
+    project.style.opacity = "0";
+  },i *100);
+
+}
+projectsBtn.addEventListener('click',(e) =>{
+  e.preventDefault();
+
+  projectsBtn.firstElementChild.nextElementSibling.classList.toggle("change");
+
+  showHideBool ? ( projectsBtnText.textContent = 'show less') : ( projectsBtnText.textContent = 'show more')
+  projects.forEach((project,i) =>{
+   i >= 6 && (showHideBool ?   showProjects(project,i): hideProjects(project,i))
+  });
+  showHideBool = !showHideBool;
+});
+//End of Projects button
 // End of projects

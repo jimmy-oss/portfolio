@@ -12,6 +12,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .center{
@@ -93,6 +94,21 @@ html{
     }
 }
 /*end of main button*/
+/*Section heading*/
+.section-heading{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+}
+/*End of section heading*/
 /* end of Common styles*/
 
 /*mouse circle */
@@ -267,6 +283,7 @@ html{
     line-height: 3.5;
     position: sticky;
     top: 0;
+    font-weight: 300;
 }
 .featured-text-1{
     margin: 0 auto 0 10rem;
@@ -288,25 +305,12 @@ html{
     position: relative;
     padding: 10rem 10rem 15rem 10rem;
 }
-/*Section2 heading*/
-.section-2-heading{
-        font-size: 2rem;
-        font-weight: 300;
-        color: #fff;
-        text-transform: uppercase;
-        position: absolute;
-        top: 50%;
-        left: 3rem;
-        transform: translateY(-50%);
-        width: 0;
-        word-break: break-all;
-        line-height: 4;
-}
-/*End of section2 heading*/
+ 
 /*About me texts*/
 .about-me-text{
     width: 80%;
     margin: auto;
+    margin-top: 8em;
     
     
 }
@@ -362,12 +366,12 @@ html{
      padding-bottom: 15rem;
  }
  .project{
-  width: 42rem;
-  height: 45rem;
-  margin: -0.2rem;
-  margin-bottom: 2em;
-  margin-left:  auto ;
-  margin-right: auto;
+    width: 32rem;
+    height: 38rem;
+    overflow: hidden;
+    margin: 5rem;
+   margin-left: 5.5em;
+   margin-right: 0.1em;
   margin-top: 5em;
   overflow: hidden;
   background-color: #000;
@@ -378,6 +382,7 @@ html{
   border-radius: 0.5rem;
   cursor: pointer;
   perspective: 20rem;
+  transition: opacity 0.5s;
  }
  .project img{
      width: 82%;
@@ -482,4 +487,24 @@ html{
  
 /*end of project hide button*/
 /*end of projects*/
+/*projects button*/
+.projects-btn{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.projects-btn .main-btn-line{
+    transition: all 0.5s;
+}
+.change > .main-btn-line:nth-child(1){
+    transform: rotate(45deg) translateX(-.65rem);
+}
+.change > .main-btn-line:nth-child(2){
+    transform: rotate(-45deg) translateX(.65rem);
+}
+.change > .main-btn-line:nth-child(3){
+    transform: rotate(90deg) translateX(-.5rem);
+    border-left: 0.1rem solid #fff;
+    border-right: none;
+}
+/*end of projects button*/
 /*end of section 3*/
