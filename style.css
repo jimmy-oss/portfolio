@@ -183,6 +183,10 @@ html{
     background-repeat: no-repeat;
 }
 /*end of page BG*/
+/*Navigation*/
+/*Navbar*/
+/*end of Navbar*/
+/* end of Navigation*/
 /*section 1*/
 .section-1{
      position: relative;
@@ -522,6 +526,7 @@ html{
     width: 70%;
     margin: 2rem 0;
     border-bottom: 0.5rem solid #9b0e0e;
+    cursor: pointer;
 }
 .service-btn{
     width: 100%;
@@ -538,6 +543,7 @@ html{
     position: absolute;
     right: 0;
     transition: right 0.5s;
+    
 }
 .service-text{
     font-size: 4rem;
@@ -551,10 +557,90 @@ html{
     transition: all 0.2s;
 }
 .change.service-text{
-    height: 15rem;
+    height: 12rem;
     visibility: visible;
     opacity: 1;
     transition: height 0.5s,opacity 0.5s 0.5s;
 }
 /*end of services*/
 /*end of section 4*/
+/*section 5*/
+.section-5{
+    position:relative;
+    height: 100vh;
+    flex-direction: column;
+}
+/*form*/
+.form-heading{
+    font-family: "Poppins" sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    color: #9b0e0e;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+    transition: opacity 0.3s;
+    margin-top: 4em;
+    text-align: center;
+}
+.contact-form{
+    flex-direction: column;
+}
+.contact-form-input{
+    width: 60rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.1rem solid #9b0e0e;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #aaa;
+    letter-spacing: 0.1rem;
+    height: 5rem;
+}
+.contact-form-textarea{
+     height: 20rem;
+     resize: none;
+}
+.form-submit-btn{
+    width: 20rem;
+    height: 5rem;
+    background-color: #9b0e0e;
+    border: none;
+    align-self: start;
+    font-size: 1.8rem;
+    color: #fff;
+}
+/*end of form*/
+/*slideshow*/
+.slideshow{
+    display: flex;
+    width: 50rem;
+    margin-top: 10rem;
+    padding: 0 2rem;
+}
+.slideshow-link{
+    width: 20%;
+    filter: brightness(0.5);
+    transform: filter 1.5s;
+}
+.slideshow-link:nth-child(1),
+.slideshow-link:nth-child(5){
+    transition: width  .5s,
+    opacity 0.5s;
+}
+.slideshow-link:nth-child(3){
+   transition: filter 0.5s;
+}
+.slideshow-link img{
+    width: 100%;
+    padding: 0 1rem;
+}
+.faded-out{
+    opacity: 0;
+    width: 0;
+}
+.light{
+    filter: brightness(1.5);
+}
+/*end of slideshow*/
+/*end of section 5*/
