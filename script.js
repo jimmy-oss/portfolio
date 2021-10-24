@@ -79,6 +79,23 @@ mainBtns.forEach((btn) => {
   });
 });
 //end of main button
+//Navigation
+const menuIcon = document.querySelector(".menu-icon")
+const navbar = document.querySelector(".navbar")
+
+document.addEventListener("scroll", () => {
+  menuIcon.classList.add("show-menu-icon");
+  navbar.classList.add("hide-navbar");
+  if(window.scrollY === 0){
+    menuIcon.classList.remove("show-menu-icon");
+    navbar.classList.remove("hide-navbar");
+  }
+});
+menuIcon.addEventListener("click", () =>{
+  menuIcon.classList.remove("show-menu-icon");
+  navbar.classList.remove("hide-navbar");
+});
+//End of Navigation
 //About me texts
 const aboutMeText = document.querySelector(".about-me-text")
 const aboutMeTextContent = "I am a designer, also a full stack software engineer & I create awards winning websites with the best user experience remember mindfulness in the workplace is the key to success just contact me. :)";

@@ -184,10 +184,61 @@ html{
 }
 /*end of page BG*/
 /*Navigation*/
+/*Menu Icon*/
+.menu-icon{
+    position: fixed;
+    top: 0;
+    right: 6rem;
+    width: 12rem;
+    height: 7rem;
+    flex-direction: column;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+.menu-icon-line{
+    width: 4rem;
+    height: 0.1rem;
+    background-color: #fff;
+    margin: 0.5rem 0;
+    box-sizing: 0  0.3rem 0.5rem #000;
+}
+/*End of Menu icon*/
+.show-menu-icon{
+    opacity: 1;
+    visibility: visible;
+}
 /*Navbar*/
+.navbar{
+    position: fixed;
+    top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    z-index: 100;
+    transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+.navbar-link{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0  2.5rem;
+    text-shadow: 0 0.3rem 0.5rem #000;
+      
+}
+.hide-navbar{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10rem);
+}
+
 /*end of Navbar*/
 /* end of Navigation*/
-/*section 1*/
+/*section 1*/ 
 .section-1{
      position: relative;
      width: 100%;
@@ -527,6 +578,7 @@ html{
     margin: 2rem 0;
     border-bottom: 0.5rem solid #9b0e0e;
     cursor: pointer;
+    z-index: 200;
 }
 .service-btn{
     width: 100%;
