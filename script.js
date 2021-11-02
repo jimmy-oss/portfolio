@@ -90,6 +90,15 @@ mainBtns.forEach((btn) => {
    const scrolledPortion = window.pageYOffset
 
    const scrolledPortionDegree = (scrolledPortion / (pageHeight - pageViewportHeight)) * 360;
+   halfCircles.forEach(el => {
+     el.style.transform = `rotate(${scrolledPortionDegree}deg)`;
+     if(scrolledPortionDegree >= 180){
+       halfCircles[0].style.transform = "rotate(180deg)";
+       halfCircleTop.style.opacity = "0";
+     }else{
+      halfCircleTop.style.opacity = "1";
+     }
+   })
  }
 
 
@@ -105,6 +114,7 @@ document.addEventListener("scroll", () => {
     menuIcon.classList.remove("show-menu-icon");
     navbar.classList.remove("hide-navbar");
   }
+  progressBarFn();
 });
 menuIcon.addEventListener("click", () =>{
   menuIcon.classList.remove("show-menu-icon");
