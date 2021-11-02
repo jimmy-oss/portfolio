@@ -79,6 +79,21 @@ mainBtns.forEach((btn) => {
   });
 });
 //end of main button
+// Progress Bar
+ const halfCircles = document.querySelectorAll(".half-circle")
+ const halfCircleTop = document.querySelector(".half-circle-top")
+ const progressBarCircle = document.querySelector(".progress-bar-circle")
+
+ const progressBarFn = () => {
+   const pageViewportHeight = window.innerHeight
+   const pageHeight = document.documentElement.scrollHeight
+   const scrolledPortion = window.pageYOffset
+
+   const scrolledPortionDegree = (scrolledPortion / (pageHeight - pageViewportHeight)) * 360;
+ }
+
+
+// End of Progress Bar
 //Navigation
 const menuIcon = document.querySelector(".menu-icon")
 const navbar = document.querySelector(".navbar")

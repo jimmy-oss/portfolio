@@ -9,6 +9,7 @@
     list-style-type: none;
     outline: none;
     font-family: "Jura",sans-serif;
+    scroll-behavior: smooth;
 }
 html{
     font-size: 62.5%;
@@ -183,6 +184,62 @@ html{
     background-repeat: no-repeat;
 }
 /*end of page BG*/
+ /* Progress Bar */
+ .progress-bar{
+     position: fixed;
+     bottom: 8rem;
+     right: 8rem;
+     width: 8rem;
+    height: 8rem;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 200;
+    overflow: hidden;
+ }
+ .half-circle,
+ .half-circle-top{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     transform-origin: right center;
+ }
+ .half-circle:nth-child(1){
+    background-color: #b60000;
+ }
+ .half-circle:nth-child(2){
+    background-color:#b60000;
+ }
+ .half-circle-top{
+     background-color: #fff;
+ }
+ /*.progress-bar:hover
+ .half-circle-top{
+     opacity: 0;
+     transition: opacity 0s 1s;
+ }
+ .progress-bar:hover
+ .half-circle:nth-child(1){
+     transform: rotate(180deg);
+     transition: transform 1s linear;
+    
+ }
+.progress-bar:hover  
+ .half-circle:nth-child(2){
+     transform: rotate(360deg);
+     transition: transform 2s linear;  
+ } */
+ .progress-bar-circle{
+     width: 7.8rem;
+     height: 7.8rem;
+     background-color: #000;
+     border-radius: 50%;
+     color: #fff;
+     font-size: 4rem;
+     z-index: 200;
+ }
+  /* End of Progress Bar */
 /*Navigation*/
 /*Menu Icon*/
 .menu-icon{
