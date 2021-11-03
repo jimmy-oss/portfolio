@@ -551,6 +551,7 @@ html{
     background-color:rgba(0, 0, 0, 0.9);
     overflow: hidden scroll;
     z-index: 100;
+    scroll-behavior: smooth;
     animation: imgWrapperAnime 1s forwards;
 }
 @keyframes imgWrapperAnime{
@@ -566,6 +567,7 @@ html{
     border-radius: 0.5rem;
     padding: 7rem 20rem;
     opacity: 0.9;
+    display: block;
     transform-origin: top center;
     animation: imgAnime 1s 1s both;
 }
