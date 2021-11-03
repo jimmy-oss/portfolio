@@ -80,9 +80,11 @@ mainBtns.forEach((btn) => {
 });
 //end of main button
 // Progress Bar
- const halfCircles = document.querySelectorAll(".half-circle")
- const halfCircleTop = document.querySelector(".half-circle-top")
- const progressBarCircle = document.querySelector(".progress-bar-circle")
+const sections =  document.querySelectorAll("section");
+const progressBar = document.querySelector(".progress-bar");
+ const halfCircles = document.querySelectorAll(".half-circle");
+ const halfCircleTop = document.querySelector(".half-circle-top");
+ const progressBarCircle = document.querySelector(".progress-bar-circle");
 
  const progressBarFn = () => {
    const pageViewportHeight = window.innerHeight
@@ -98,10 +100,27 @@ mainBtns.forEach((btn) => {
      }else{
       halfCircleTop.style.opacity = "1";
      }
-   })
- }
+   });
 
+   const scrollBool = scrolledPortion + pageViewportHeight === pageViewportHeight;
 
+   // Progress bar click
+  progressBar.onclick = (e)=> {
+  e.preventDefault();
+
+  const sectionPositions =  Array.from(sections).map((section) =>
+   scrolledPortion + section.getBoundingClientRect().top
+  );
+  const position = sectionPositions.find(sectionPosition => {
+  return sectionPosition >scrolledPortion
+  })
+
+  scrollBool ? window.scrollTo(0,0) : window.scrollTo(0,position);
+   console.log(position);
+  };
+   // End of progress bar click
+ };
+ progressBarFn();
 // End of Progress Bar
 //Navigation
 const menuIcon = document.querySelector(".menu-icon")
