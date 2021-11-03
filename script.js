@@ -86,9 +86,12 @@ const progressBar = document.querySelector(".progress-bar");
  const halfCircleTop = document.querySelector(".half-circle-top");
  const progressBarCircle = document.querySelector(".progress-bar-circle");
 
- const progressBarFn = (bigImgWrapper = false) => {
+let scrolledPortion = 0;
+let scrollBool = false;
+let imageWrapper = false;
+ const progressBarFn = (bigImgWrapper) => {
+   imageWrapper = bigImgWrapper
    let pageHeight = 0;
-   let scrolledPortion = 0;
    const pageViewportHeight = window.innerHeight;
     if(!bigImgWrapper){
     pageHeight = document.documentElement.scrollHeight;
@@ -110,28 +113,10 @@ const progressBar = document.querySelector(".progress-bar");
      }
    });
 
-   const scrollBool = scrolledPortion + pageViewportHeight === pageHeight;
+   scrollBool = scrolledPortion + pageViewportHeight === pageHeight;
 
    
-   // Progress bar click
-  progressBar.onclick = (e)=> {
-  e.preventDefault();
-
-  if(!bigImgWrapper){
-    const sectionPositions =  Array.from(sections).map((section) =>
-    scrolledPortion + section.getBoundingClientRect().top
-   );
-   const position = sectionPositions.find(sectionPosition => {
-   return sectionPosition >scrolledPortion
-   })
- 
-   scrollBool ? window.scrollTo(0,0) : window.scrollTo(0,position);
-  }else{
-  scrollBool ? bigImgWrapper.scrollTo(0,0) : bigImgWrapper.scrollTo(0,bigImgWrapper.scrollHeight);
-  }
-  
-  };
-   // End of progress bar click
+    
 
    // Arrow rotation
    if (scrollBool){
@@ -141,6 +126,25 @@ const progressBar = document.querySelector(".progress-bar");
    }
    // End of Arrow rotation
  };
+ // Progress bar click
+ progressBar.addEventListener("click", e => {
+  e.preventDefault();
+
+  if(!imageWrapper){
+    const sectionPositions =  Array.from(sections).map((section) =>
+    scrolledPortion + section.getBoundingClientRect().top
+   );
+   const position = sectionPositions.find(sectionPosition => {
+   return sectionPosition >scrolledPortion
+   })
+ 
+   scrollBool ? window.scrollTo(0,0) : window.scrollTo(0,position);
+  }else{
+  scrollBool ? imageWrapper.scrollTo(0,0) : imageWrapper.scrollTo(0,imageWrapper.scrollHeight);
+  }
+  
+  });
+   // End of progress bar click
  progressBarFn();
 // End of Progress Bar
 //Navigation
