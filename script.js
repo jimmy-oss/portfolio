@@ -119,6 +119,14 @@ const progressBar = document.querySelector(".progress-bar");
    console.log(position);
   };
    // End of progress bar click
+
+   // Arrow rotation
+   if (scrollBool){
+     progressBarCircle.style.transform = "rotate(180deg)";
+   }else {
+    progressBarCircle.style.transform = "rotate(0)";
+   }
+   // End of Arrow rotation
  };
  progressBarFn();
 // End of Progress Bar
