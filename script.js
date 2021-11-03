@@ -53,19 +53,19 @@ const stickyElements = (x, y,hoveredEl) => {
    
    hoveredEl.style.cssText = `top: ${y}px; left : ${x}px`;
 if (hoveredEl.offsetTop <= hoveredElPosition[0] - 100 || 
-    hoveredEl.offsetTop >= hoveredElPosition[0] +100  ||  
+    hoveredEl.offsetTop >= hoveredElPosition[0] + 100  ||  
     hoveredEl.offsetLeft <= hoveredElPosition[1]  - 100 ||
-   hoveredEl.offsetRight >= hoveredElPosition[1]+100
+   hoveredEl.offsetRight >= hoveredElPosition[1]+ 100
    )
 {
      hoveredEl.style.cssText = "";
      hoveredElPosition = [];
 }
-  hoveredEl.onmouseLeave = () => {
+  hoveredEl.onmouseleave = () => {
   hoveredEl.style.cssText = "";
   hoveredElPosition = [];
-  
-  }
+   
+  };
 }
  // end of sticky element
 }
@@ -75,7 +75,7 @@ document.body.addEventListener('mousemove',(e) =>{
 
    mouseCircleFn(x,y);
    animateCircles(e,x,y);
-const  hoveredEl = document.elementFromPoint(x, y);
+   const  hoveredEl = document.elementFromPoint(x, y);
   stickyElements(x, y, hoveredEl);
   
 });
