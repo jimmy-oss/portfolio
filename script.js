@@ -147,15 +147,18 @@ const progressBar = document.querySelector(".progress-bar");
 const menuIcon = document.querySelector(".menu-icon")
 const navbar = document.querySelector(".navbar")
 
-document.addEventListener("scroll", () => {
+const scrollFn = () => {
   menuIcon.classList.add("show-menu-icon");
   navbar.classList.add("hide-navbar");
   if(window.scrollY === 0){
     menuIcon.classList.remove("show-menu-icon");
     navbar.classList.remove("hide-navbar");
   }
+  
   progressBarFn();
-});
+}
+
+document.addEventListener("scroll", scrollFn);
 menuIcon.addEventListener("click", () =>{
   menuIcon.classList.remove("show-menu-icon");
   navbar.classList.remove("hide-navbar");
@@ -201,6 +204,8 @@ project.addEventListener('click',() =>{
  bigImgWrapper.appendChild(bigImg);
   document.body.style.overflowY = "hidden";
 
+  document.removeEventListener("scroll",scrollFn);
+
   progressBarFn(bigImgWrapper);
   bigImgWrapper.onscroll = () =>{
     progressBarFn(bigImgWrapper);
@@ -211,6 +216,8 @@ project.addEventListener('click',() =>{
   projectHideBtn.classList.remove("change");
   bigImgWrapper.remove()
   document.body.style.overflowY = "scroll";
+
+  document.addEventListener("scroll",scrollFn);
   progressBarFn();
   };
 });
