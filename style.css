@@ -749,53 +749,5 @@ html{
 /*end of section 5*/
 
 /*Responsive*/
-@media(max-width:1500px){
-    .circle{
-        width: 30rem;
-        height: 30rem;
-    }
-    .main-circle{
-        width: 60rem;
-        height: 60rem;
-        min-width:130px ;
-        min-height:142px ;
-        margin-top: 15em;
-    }
-    .main-circle:hover{
-        width: 55rem;
-        height: 55rem;
-    }
-    .main-circle img{
-        width: 160%;
-        height: 160%;
-    }
-    .navbar{
-        width: -45rem;
-        height: -45rem;
-        margin-right: 25rem;
-        padding-right: 20rem;
-    }
-    .progress-bar{
-        position: fixed;
-        bottom: 12rem;
-        left: 130em;
-        right: 130em;
-        border-radius: 50%;
-        width: 8rem;
-        height: 8rem;
-    }
-    .about-me-text span{
-        font-size: 11rem;
-        margin-bottom: 5em;
-        top: 1em;
-    }
-    .slideshow{
-        top: -20em;
-        margin-bottom: 2em;
-        padding-top: 2em;
-        
-    }
-
-   
-}
+ 
 /*End of Responsive*/ 
