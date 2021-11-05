@@ -265,9 +265,9 @@ project.addEventListener('click',() =>{
 
  const bigImg = document.createElement("img")
  bigImg.className = "project-img"
- const imgPath = project.firstElementChild.getAttribute('src').split(".")[1];
+ const imgPath = project.firstElementChild.getAttribute('src', ).split(".")[1];
  console.log(imgPath);
- bigImg.setAttribute('src' , `${imgPath}-big.jpg`)
+ bigImg.setAttribute('src' ,`${imgPath}-big.jpg`)
  bigImgWrapper.appendChild(bigImg);
   document.body.style.overflowY = "hidden";
 
