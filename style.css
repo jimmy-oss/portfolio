@@ -759,6 +759,15 @@ html {
   font-size: 1.8rem;
   color: #fff;
 }
+.touch{
+  color: #fff;
+  font-size: 25px;
+}
+.platforms{
+  color: #fff;
+  font-size: 20px;
+}
+ 
 
 /* Form Validation */
 .message {
@@ -975,6 +984,10 @@ html {
   html {
     font-size: 50%;
   }
+   .platforms{
+  font-size: 2rem;
+  margin-left: 6rem;
+ }
 
   .contact-form-input {
     width: 50rem;
@@ -985,7 +998,10 @@ html {
   html {
     font-size: 40%;
   }
-
+ .platforms{
+  font-size: 2.2rem;
+  margin-left: 6rem;
+ }
   .main-circle img {
     width: 180%;
     height: 180%;
@@ -1017,6 +1033,13 @@ html {
   html {
     font-size: 35%;
   }
+  .touch{
+    font-size: 20px;
+  }
+   .platforms{
+  font-size: 2.1rem;
+  margin-left:15rem;
+ }
 
   .logo {
     font-size: 1.7rem;
