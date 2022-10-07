@@ -450,8 +450,7 @@ html {
   letter-spacing: 0.5rem;
   line-height: 0.9;
   text-shadow: 0 0 1rem #9b0e0e;
-  position: relative;
-  mix-blend-mode: color-dodge;
+  position: relative;  
 }
 
 @keyframes aboutMeTextAnim {
